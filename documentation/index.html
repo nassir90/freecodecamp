@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Programming Tidbits</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<main id="main-doc">
+<nav id="navbar">
+<header>
+<h1>Coding Tidbits</h1>
+<ul class="huh">
+<li><a class="nav-link" href="#Concurrency_Multithreading_and_Asynchronicity">Concurrency Multithreading and Asynchronicity</a></li>
+<li><a class="nav-link" href="#CSS_Is_more_Powerful_than_You_Thought">CSS Is more Powerful than You Thought</a></li>
+<li><a class="nav-link" href="#Lambada_Calculus_and_Formal_Logic">Lambada Calculus and Formal Logic</a></li>
+<li><a class="nav-link" href="#Width_100">Width 100</a></li>
+<li><a class="nav-link" href="#Systemd_Systemctl_and_Service">Systemd Systemctl and Service</a></li>
+</ul>
+<hr>
+</nav>
+<div>
+<section id="Concurrency_Multithreading_and_Asynchronicity" class="main-section">
+<header><h2>Concurrency Multithreading and Asynchronicity</h2></header>
+<p>Concurrency simply refers to doing multiple tasks at the same time, that is to say, it is equivalent to the term "multitasking"</p>
+<p>As single or double thread capabilties and synchronousness and asynchronousness can be thought of as two binary properties, there are four possible means of accomplishing concurrency</p>
+<ol>
+<li>Single threaded, synchronous: Do one task at a time on one thread e.g. morning routine</li>
+<li>Single threaded, asynchronous: Start and stop tasks for a designated reason, such as priority.
+Think of a the plebian and VIP lines boarding an airplane.
+There is one line, but the plebian line is stopped occasionally to allow the VIPs inside</li>
+<li>Multi threaded, synchronous: Do tasks to completion on more than one thread</li>
+<li>Multi threaded, asynchronous: Do #2 on multiple threads</li>
+</ol>
+</section>
+<section id="CSS_Is_more_Powerful_than_You_Thought" class="main-section">
+<header><h2>CSS Is more Powerful than You Thought</h2></header>
+<p>Sibling selectors in CSS enable you to do things that you may have thought required Javascript</p>
+<h3>Error and Success messages example</h3>
+<p>Consider a scenario in which you want to display an error message or a success message depending on what goes into an input box.
+Some slow individuals may posit that one must attach an <code>onChange</code> callback to each input box, but these individuals are myopic and quite frankly, insane.</p>
+<p>What one ought to do is wrap the input, the error message and the success message inside a common parent and let CSS guide the way</p>
+<p>The <code>:placeholder-shown</code> pseudoclass is used as a surrogate test as to whether or not an input box is empty.
+If so, use sibling selectors to set the display of both the error and success messages to <code>none</code></p>
+<p>Then consider the conditions under which the error and successs messages are invisible:</p>
+<ul>
+<li>The error message is invisible when the contents of the input are <code>:not(:invalid)</code></li>
+<li>The success message ins invisible when the contents of the input are <code>:invalid</code></li>
+</ul>
+<p>Simply encode this into css and you'll have yourself Javascript-less error and success indicators!!!</p>
+</section>
+<section id="Lambada_Calculus_and_Formal_Logic" class="main-section">
+<header><h2>Lambada Calculus and Formal Logic</h2></header>
+<h3>Formal Logic</h3>
+<p>Formal Logic is quite interesting.
+You can use it to <em>model</em> circuitboards, law and the implications of a theory.
+Leraning Formal Logic also teaches you about the structure of argument, which may be of use to those who need cheap tricks to make persuasive pieces.</p>
+<p>However, one shoudln't be mistaken and begin to believe that logic is the sole facet of the truth.
+<em>Model</em> is the keyword here.
+You may:</p>
+<ul>
+<li>Use incorrect premises to attain a correct conclusion, and get shut down by logic obsessed individuals like yourself who don't look at emperical data</li>
+<li>Use culturally accepted premises (which are actually incorrect) and then come to an incorrect conclusion (or a correct one, who knows).</li>
+</ul>
+<p>There's a reason we destroy people with <strong>FACTS AND LOGIC</strong> rahter than just <small></em>logic</em></small>
+<p>That said, some percentage of finding truths (please God let it be small) simply comes down to luck.
+You don't know whether you will be indoctrinated by Iassac Newton or CNN, and once indoctrinated, it is incredibly difficult to break the spell.
+It's for this reason that I disavow the title of "skeptic".
+On it's own, I would be fine with it, but as of this moment it has come to mean staunch materialism combined with a rejection of unorthodox views tauted as "conspiracy theories" - how ironic!</p>
+<h3>Lambada Calculus</h3>
+<p>Lambada Calculus is also interesting, as it's a turing-complete system and is actually easier to reason with than whith turing machines.</p>
+</section>
+<section id="Width_100" class="main-section">
+<header><h2>Width 100</h2></header>
+<p>Don't use <code>width:100%</code> for headers.</p>
+<p>Instead, use <code>position:absolute/fixed</code> comnined with <code>left: 0px; right: 0px; top: 0px;</code>.
+Thank me later</p>
+</section>
+<section id="Systemd_Systemctl_and_Service" class="main-section">
+<header><h2>Systemd Systemctl and Service</h2></header>
+<p>Systemd is the papa process.
+It's the daemon run with PID=1, and is used as a replacement for SysV which itself was a tool for managing services</p>
+<p>Systemctl is the management program provided directly by systemd</p>
+<p>Service is a wrapper around service managing programs, and may use systemctl if it is available.
+Of course, as a wrapper, it has less functionality than systemctl itself<p>
+<p>Use systemctl for specificity and service in scripts for cross-compatibility</p>
+</section>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,3 @@
+If you set the position property of an element to fixed and subsequently try to set the width to 100%, you will not get the expected result of the element taking up 100% of its container, instead, you will see the element go BEYOND it's container.
+Here's the problem on stackoverflow: https://stackoverflow.com/questions/18442628/position-fixed-width-100.
+To solve this problem, you use both left and right offsets, setting them both to zero.

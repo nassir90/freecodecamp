@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link href="style.css" rel="stylesheet">
+<title>Sleep Survey</title>
+
+</head>
+
+<body>
+
+<main>
+
+<h1 id="title">Sleep Survey</h1>
+
+<p id="description">I need this information for research purposes. I don't respect your privacy.</p>
+
+<form action="index.html" method="GET" id="survey-form">
+	<label id="name-label" for="name">
+		What's your name?
+		<input name="name" id="name" type="text" placeholder="Acquinas" required>
+		<div class="good">Name Ok</div>
+	</label>
+	
+	<label id="email-label" for="email">
+		What's your email?
+		<input name="email" id="email" type="email" placeholder="ihatetheantichrist@god.com" required>
+		<div class="good">Email Ok</div>
+		<div class="error">Bad email</div>
+	</label>
+
+	<label id="number-label" for="number">
+		On average, how much sleep do you get per night?
+		<input name="hours-of-sleep" id="number" type="number" min="3" max="15" placeholder="8" required>
+		<div class="good">Sleep Within Conceivable Range</div>
+		<div class="error">Abnormal Sleep Duration</div>
+	</label>
+
+
+	<label for="dropdown">
+	How would you describe your bed?
+	<select name="bed-quality" id="dropdown">
+		<option value="high-quality">High Quality</option>
+		<option value="meh-tier">Medium Quality</option>
+		<option value="shite">Low Quality</option>
+	</select>
+	</label>
+
+	<fieldset>
+		<legend>Do you remember your dreams?</legend>
+		<label><input value="1" type="radio" name="dream">Yes</label>
+		<label><input value="0" type="radio" name="dream">No</label>
+	</fieldset>
+
+	<fieldset>
+		<legend>Select which applies to you:</legend>
+		<label>Video Game Consumer: <input name="gamer" value="on" type="checkbox"></label>
+		<label>Nature Enjoyer: <input name="nature-enjoyer" value="on" type="checkbox"></label>
+	</fieldset>
+
+	<label for="comments">
+	Additional Comments:<br>
+	<textarea id="comments" name="comments" placeholder="Comments here..."></textarea>
+	<div class="good">(NB: Will not be read)</div><br>
+	</label>
+
+	<input type="submit" id="submit">
+
+</form>
+
+</main>
+
+</body>
+
+</html>

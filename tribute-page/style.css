@@ -1,0 +1,51 @@
+body {
+	background-color: lightblue;
+	color: darkblue;
+	font-family: sans-serif;
+	margin: 0 10%;
+}
+
+header {
+	background-color: blue;
+	color: lightblue;
+	position: fixed;
+	padding: 0.5em;
+	height: 7em;
+	left: 0px;
+	right: 0px;
+	top: -6.5em;
+	transition: top 1s;
+	box-shadow: 0px 3px 5px 1px grey;
+}
+
+h1 {
+	display: inline-block;
+	flex-grow: 1;
+}
+
+figcaption {
+	font: serif condensed italic;
+}
+
+header:hover {
+	top: 0;
+}
+
+header:hover > .hide-if-hover {
+	display: none;
+}
+
+.header {
+	display: flex;
+}
+
+a {
+	color: lightblue;
+}
+
+#image {
+	max-width: 50%;
+	border: 5px inset blue;
+	border-radius: 20px;
+	z-index: -1;
+}

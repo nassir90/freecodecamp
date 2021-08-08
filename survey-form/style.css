@@ -1,0 +1,50 @@
+body {
+	background-color: wheat;
+}
+
+h1 {
+	padding: 10px;
+	position: relative;
+	background-color: #22E;
+	border-radius: 5px;
+}
+
+.good, .error {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.good {
+	background-color: green;
+}
+
+.error {
+	background-color: red;
+}
+
+input:invalid ~ .good, input:not(:invalid) ~ .error {
+	display: none;
+}
+
+
+fieldset {
+	border: none;
+	padding: 0px;
+}
+
+label, fieldset {
+	display: block;
+	margin: 10px 0px;
+	border: 1px solid #22E;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+fieldset label {
+	border: none;
+	padding: 0px;
+}
+
+textarea:placeholder-shown ~ .good, input:placeholder-shown ~ .good, input:placeholder-shown ~ .error {
+	display: none;
+}

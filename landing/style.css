@@ -1,0 +1,67 @@
+body {
+	background: #222;
+	color: yellow;
+	padding-top: 120px;
+}
+
+h1, h2 {
+	font-family: sans-serif;
+}
+
+header, form {
+	background-color: rgb(113, 48, 90);
+	border-bottom: 2px solid yellow;
+	padding: 10px;
+}
+
+form {
+	display: inline-block;
+}
+
+header {
+	display: flex;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	background-color: rgb(113, 48, 90);
+	color: yellow;
+	z-index: 10;
+}
+
+nav {
+	align-self: center;
+	padding: 0px;
+	text-align: right;
+}
+
+ul.nav li {
+	display: inline-block;
+	padding: 5px;
+	height; 100%;
+}
+
+ul.nav li:hover, ul.nav li.current {
+	background-color: rgb(59, 25, 47);
+}
+
+a {
+	color: yellow;
+}
+
+#header-img {
+	margin-right: 20px;
+}
+
+#video {
+	display: block;
+	text-align: center;
+}
+
+
+@media (min-width: 1000px) {
+	center {
+		display: flex;
+		justify-content: space-evenly;
+	}
+}
